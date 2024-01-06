@@ -20,8 +20,13 @@
 		console.log(data);
     document.getElementById('typing_stuff').style.display = 'none';
     document.getElementById('Test_results').style.display = 'block';
-
-    
+		mygrade = 'weird'
+		for (let i=0; i++; i<=data.length) {
+    	if (data[i]['Name']) == document.getElementById('name'){
+				mygrade = data[i]['Test 1']
+			}
+		console.log(mygrade)
+		}
   }
   </script>
   <body>
@@ -29,7 +34,7 @@
 
     <h1 style='text-align:center'> Math Olympiad Test Result Viewer </h1>
     <center id='typing_stuff'>
-    <p>Type the students name(first and last name)</p><input type="text" id="name" name="name" value="" style='text-align:center '><p>Type Your email</p><input type="text" id="email" name="email" value="" style='text-align:center '><p>Type the students grade</p><input type="text" id="email" name="email" value="" style='text-align:center '>
+    <p>Type the students name(first and last name)</p><input type="text" id="name" name="name" value="" style='text-align:center '><p>Type Your email</p><input type="text" id="email" name="email" value="" style='text-align:center '><p>Type the students grade</p><input type="text" id="grade" name="grade" value="" style='text-align:center '>
     <p><p>
     <button onclick='view()'>View Test</button>
     </center>
