@@ -22,7 +22,7 @@
     document.getElementById('Test_results').style.display = 'block';
 		mygrade = 'weird'
 		for (let i=0; i++; i<=data.length) {
-    	if (data[i]['Name']) == document.getElementById('name'){
+    	if (data[i]['Name'] === document.getElementById('name')){
 				mygrade = data[i]['Test 1']
 			}
 		console.log(mygrade)
