@@ -1,9 +1,29 @@
 <!Doctype-html>
 <html>
+
   <head>
     <title>Math olympiad</title>
   </head>
+  <style>
+
+    #typing_stuff {
+    	display: block;
+    }
+  </style>
+  <script>
+  function view() {
+  	document.getElementById('typing_stuff').style.display = 'none';
+    document.createElement('style');
+  }
+  </script>
   <body>
-    <p> Testing </p>
+
+
+    <h1 style='text-align:center'> Math Olympiad Test Result Viewer </h1>
+    <center id='typing_stuff'>
+    <p>Type Your Name(Full)</p><input type="text" id="name" name="name" value="" style='text-align:center '><p>Type Your Mom/Dads Email</p><input type="text" id="email" name="email" value="" style='text-align:center '>
+    <p><p>
+    <button onclick='view()'>View Test</button>
+    </center>
   </body>
 </html>
