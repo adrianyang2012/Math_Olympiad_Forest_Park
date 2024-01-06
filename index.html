@@ -15,7 +15,10 @@
   </style>
   <script>
   function view() {
-    import data from "Math Olympiad_Sheet_json.json";
+    fetch("Math Olympiad_Sheet_json.json") 
+        .then((res) => { 
+        return res.json(); 
+    }).then((data) => console.log(data)); 
     document.getElementById('typing_stuff').style.display = 'none';
     document.getElementById('Test_results').style.display = 'block';
 
