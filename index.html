@@ -14,7 +14,7 @@
     }
   </style>
   <script>
-  function view() {
+  async function view() {
 		const res = await fetch('Math Olympiad_Sheet_json.json')
 		data = await res.json();
 		console.log(data);
