@@ -21,11 +21,14 @@
 	  	//console.log(document.getElementById('name').value);
 		document.getElementById('typing_stuff').style.display = 'none';
 		document.getElementById('Test_results').style.display = 'block';
-		mygrade = 'weird';
 		for (let i = 0;i<data.length; i++) {
 			console.log(data[i]);
 			if (data[i]['Name'] === document.getElementById('name').value){
-				mygrade = data[i]['Test 1'];
+				document.getElementById('Test 1').innerText +=' '+data[i]['Test 1'];
+				document.getElementById('Test 2').innerText +=' '+data[i]['Test 2'];
+				document.getElementById('Test 3').innerText +=' '+data[i]['Test 3'];
+				document.getElementById('Test 4').innerText +=' '+data[i]['Test 4'];
+				document.getElementById('Test 5').innerText +=' '+data[i]['Test 5'];
 			}
 		}
   }
