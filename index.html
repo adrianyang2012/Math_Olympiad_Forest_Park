@@ -20,12 +20,13 @@
 		console.log(data);
     document.getElementById('typing_stuff').style.display = 'none';
     document.getElementById('Test_results').style.display = 'block';
-		mygrade = 'weird'
+		mygrade = 'weird';
 		for (let i=0; i++; i<=data.length) {
+			
     	if (data[i]['Name'] === document.getElementById('name')){
-				mygrade = data[i]['Test 1']
+				mygrade = data[i]['Test 1'];
 			}
-		console.log(mygrade)
+		console.log(mygrade);
 		}
   }
   </script>
