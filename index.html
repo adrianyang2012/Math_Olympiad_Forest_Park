@@ -24,11 +24,13 @@
 		for (let i = 0;i<data.length; i++) {
 			console.log(data[i]);
 			if (data[i]['Name'] === document.getElementById('name').value){
-				document.getElementById('Test 1').innerText +=' '+data[i]['Test 1'];
-				document.getElementById('Test 2').innerText +=' '+data[i]['Test 2'];
-				document.getElementById('Test 3').innerText +=' '+data[i]['Test 3'];
-				document.getElementById('Test 4').innerText +=' '+data[i]['Test 4'];
-				document.getElementById('Test 5').innerText +=' '+data[i]['Test 5'];
+				document.getElementById('Test 1').innerText +=' :'+data[i]['Test 1'];
+				document.getElementById('Test 2').innerText +=' :'+data[i]['Test 2'];
+				document.getElementById('Test 3').innerText +=' :'+data[i]['Test 3'];
+				document.getElementById('Test 4').innerText +=' :'+data[i]['Test 4'];
+				document.getElementById('Test 5').innerText +=' :'+data[i]['Test 5'];
+				document.getElementById('Total Score').innerText +=' :'+data[i]['Total Score'];
+				
 			}
 		}
   }
@@ -48,6 +50,7 @@
         <p style='text-align: center;' id='Test 3'>Test 3 Result</p>
         <p style='text-align: center;' id='Test 4'>Test 4 Result</p>
         <p style='text-align: center;' id='Test 5'>Test 5 Result</p>
+	<p style='text-align: center;' id='Total Score'>Total Score</p>
     </div>
   </body>
 </html>
