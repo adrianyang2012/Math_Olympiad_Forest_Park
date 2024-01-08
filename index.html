@@ -18,6 +18,7 @@
 		const res = await fetch('Math Olympiad_Sheet_json.json')
 		data = await res.json();
 		console.log(data[0]['Name']);
+	  	console.log(document.getElementById('name'))
 		document.getElementById('typing_stuff').style.display = 'none';
 		document.getElementById('Test_results').style.display = 'block';
 		mygrade = 'weird';
