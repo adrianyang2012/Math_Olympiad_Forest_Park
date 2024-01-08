@@ -21,7 +21,7 @@
 		document.getElementById('typing_stuff').style.display = 'none';
 		document.getElementById('Test_results').style.display = 'block';
 		mygrade = 'weird';
-		for (let i=0; i++; i<=data.length;) {
+		for (let i=0; i++; i<=data.length) {
 			console.log(data[i]);
 			if (data[i]['Name'] === document.getElementById('name')){
 				mygrade = data[i]['Test 1'];
