@@ -18,14 +18,15 @@
 		const res = await fetch('Math Olympiad_Sheet_json.json')
 		data = await res.json();
 		console.log(data[0]['Name']);
-	  	console.log(document.getElementById('name'));
+	  	console.log(document.getElementById('name').value);
 		document.getElementById('typing_stuff').style.display = 'none';
 		document.getElementById('Test_results').style.display = 'block';
 		mygrade = 'weird';
 		for (let i = 0; i++; i<=data.length) {
 			console.log(data[i]);
-			if (data[i]['Name'] === document.getElementById('name')){
+			if (data[i]['Name'] === document.getElementById('name').value){
 				mygrade = data[i]['Test 1'];
+				console.log(mygrade);
 			}
 		}
   }
