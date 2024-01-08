@@ -22,8 +22,7 @@
 		document.getElementById('typing_stuff').style.display = 'none';
 		document.getElementById('Test_results').style.display = 'block';
 		for (let i = 0;i<data.length; i++) {
-			console.log(data[i]);
-			if (data[i]['Name'] === document.getElementById('name').value){
+			if (data[i]['Name'] === document.getElementById('name').value && data[i]['Room Number'] === document.getElementById('room').value && (document.getElementById('email').value === document.getElementById('Parent email').value || (document.getElementById('email').value === document.getElementById('Additional Parent email').value && !(document.getElementById('Additional Parent email').value) === ''))){
 				document.getElementById('Test 1').innerText +=' :'+data[i]['Test 1'];
 				document.getElementById('Test 2').innerText +=' :'+data[i]['Test 2'];
 				document.getElementById('Test 3').innerText +=' :'+data[i]['Test 3'];
@@ -40,7 +39,7 @@
 
     <h1 style='text-align:center'> Math Olympiad Test Result Viewer </h1>
     <center id='typing_stuff'>
-    <p>Type the students name(first and last name)</p><input type="text" id="name" name="name" value="" style='text-align:center '><p>Type Your email</p><input type="text" id="email" name="email" value="" style='text-align:center '><p>Type the students grade</p><input type="text" id="grade" name="grade" value="" style='text-align:center '>
+    <p>Type the students name(first and last name)</p><input type="text" id="name" name="name" value="" style='text-align:center '><p>Type Your email</p><input type="text" id="email" name="email" value="" style='text-align:center '><p>Type the students room number</p><input type="text" id="room" name="room" value="" style='text-align:center '>
     <p><p>
     <button onclick='view()'>View Test</button>
     </center>
