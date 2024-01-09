@@ -19,7 +19,7 @@
 		data = await res.json();
 		//console.log(data[0]['Name']);
 	  	//console.log(document.getElementById('name').value);
-		
+		correct = 0;
 		for (let i = 0;i<data.length; i++) {
 			console.log(data[i]['Name'] === document.getElementById('name').value && data[i]['Room Number'].toString() === document.getElementById('room').value && (document.getElementById('email').value === data[i]['Parent email'] || (document.getElementById('email').value === data[i]['Additional Parent email'] && !(data[i]['Additional Parent email'] === ''))))
 			if (data[i]['Name'] === document.getElementById('name').value && data[i]['Room Number'].toString() === document.getElementById('room').value && (document.getElementById('email').value === data[i]['Parent email'] || (document.getElementById('email').value === data[i]['Additional Parent email'] && !(data[i]['Additional Parent email'] === '')))){
@@ -31,12 +31,15 @@
 				document.getElementById('Total Score').innerText +=' :'+data[i]['Total Score'];
 				document.getElementById('typing_stuff').style.display = 'none';
 				document.getElementById('Test_results').style.display = 'block';
+				correct = 1
 				
-			} else {
-				alert('invalid email and/or room number and/or name')
-				return 0;
 			}
 		}
+		if (correct===1) {
+			alert('invalid email and/or room number and/or name');
+			return 0;
+		}
+		
   }
   </script>
   <body>
