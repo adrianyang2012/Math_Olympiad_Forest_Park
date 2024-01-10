@@ -40,9 +40,9 @@ async function view() {
 			if (
 				(decrypt_message(data[i]['Name'],-1).toLowerCase() === document.getElementById('name').value.toLowerCase())
 				&& (data[i]['Room Number'].toString() === document.getElementById('room').value) 
-				&& (document.getElementById('email').value === decrypt_message(data[i]['Parent email'],-1)) 
-				|| (document.getElementById('email').value === decrypt_message(data[i]['Additional Parent email'],-1)) 
-				&& !(decrypt_message(data[i]['Additional Parent email'],-1) === '')
+				&& (document.getElementById('email').value.toLowerCase() === decrypt_message(data[i]['Parent email'],-1)).toLowerCase()
+				|| (document.getElementById('email').value.toLowerCase() === decrypt_message(data[i]['Additional Parent email'],-1)).toLowerCase() 
+				&& !(decrypt_message(data[i]['Additional Parent email'],-1).toLowerCase() === '')
 			)
 			{
 				document.getElementById('Test 1').innerText +=': '+data[i]['Test 1'];
