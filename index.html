@@ -38,11 +38,11 @@ async function view() {
 		correct = 0;
 		for (let i = 0;i<data.length; i++) {
 			if (
-				(decrypt_message(data[i]['Name'],-1).toLowerCase() === document.getElementById('name').value.toLowerCase())
-				&& (data[i]['Room Number'].toString() === document.getElementById('room').value) 
-				&& (document.getElementById('email').value.toLowerCase().replace('z','@') === decrypt_message(data[i]['Parent email'],-1).toLowerCase())
-				|| (document.getElementById('email').value.toLowerCase().replace('z','@') === decrypt_message(data[i]['Additional Parent email'],-1).toLowerCase() )
-				&& !(decrypt_message(data[i]['Additional Parent email'],-1).toLowerCase().replace('z','@') === '')
+				(decrypt_message(data[i]['Name'],-1).toLowerCase().trim() === document.getElementById('name').value.toLowerCase().trim())
+				&& (data[i]['Room Number'].toString().trim() === document.getElementById('room').value.trim()) 
+				&& (document.getElementById('email').value.toLowerCase().replace('z','@').trim() === decrypt_message(data[i]['Parent email'],-1).toLowerCase().trim())
+				|| (document.getElementById('email').value.toLowerCase().replace('z','@').trim() === decrypt_message(data[i]['Additional Parent email'],-1).toLowerCase().trim() )
+				&& !(decrypt_message(data[i]['Additional Parent email'],-1).toLowerCase().replace('z','@').trim() === '')
 			)
 			{
 				document.getElementById('Test 1').innerText +=': '+data[i]['Test 1'];
