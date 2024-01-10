@@ -45,12 +45,12 @@ async function view() {
 				&& !(decrypt_message(data[i]['Additional Parent email'],-1).toLowerCase().replace('z','@').trim() === '')
 			)
 			{
-				document.getElementById('Test 1').innerText +=': '+data[i]['Test 1'];
-				document.getElementById('Test 2').innerText +=': '+data[i]['Test 2'];
-				document.getElementById('Test 3').innerText +=': '+data[i]['Test 3'];
-				document.getElementById('Test 4').innerText +=': '+data[i]['Test 4'];
-				document.getElementById('Test 5').innerText +=': '+data[i]['Test 5'];
-				document.getElementById('Total Score').innerText +=' :'+data[i]['Total Score'];
+				document.getElementById('Test 1').innerText +=': '+data[i]['Test 1']+'/5';
+				document.getElementById('Test 2').innerText +=': '+data[i]['Test 2']+'/5';
+				document.getElementById('Test 3').innerText +=': '+data[i]['Test 3']+'/5';
+				document.getElementById('Test 4').innerText +=': '+data[i]['Test 4']+'/5';
+				document.getElementById('Test 5').innerText +=': '+data[i]['Test 5']+'/5';
+				document.getElementById('Total Score').innerText +=': '+data[i]['Total Score']+'/25';
 				document.getElementById('typing_stuff').style.display = 'none';
 				document.getElementById('Test_results').style.display = 'block';
 				correct = 1;
