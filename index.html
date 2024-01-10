@@ -15,19 +15,19 @@
 </style>
 <link rel="icon"  href="https://fremontunified.org/forestpark/wp-content/uploads/sites/23/2023/06/forest-park.png" />
 <script>
-	function decrypt_message(message, shift) {
-  const shiftedAlphabet = [...Array(26)].map((_, i) =>
-    String.fromCharCode(((i + shift) % 26) + 65)
-  );
+function decrypt_message(message, shift) {
+  	const shiftedAlphabet = [...Array(26)].map((_, i) =>
+    		String.fromCharCode(((i + shift) % 26) + 65)
+  	);
   
-  const result = message.replace(/[a-z]/gi, (char) => {
-    const charCode = char.charCodeAt(0);
-    const index = charCode >= 97 ? charCode - 97 : charCode - 65;
+  	const result = message.replace(/[a-z]/gi, (char) => {
+    		const charCode = char.charCodeAt(0);
+    		const index = charCode >= 97 ? charCode - 97 : charCode - 65;
     
-    return shiftedAlphabet[index] || char;
-  });
+    		return shiftedAlphabet[index] || char;
+  	});
   
-  return result;
+  	return result;
 }
 	async function view() {
 		const res = await fetch('encrypted_names_json.json')
