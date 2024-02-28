@@ -7,7 +7,7 @@
 <style>
 
     #typing_stuff {
-    	display: block;
+    	display: inline;
     }
 	#Test_results {
     	display:none;
@@ -80,10 +80,10 @@ async function view() {
 
 function open_table()
 {
-	if (document.getElementById("the table").style.display == "block"){
+	if (document.getElementById("the table").style.display == "inline"){
 		document.getElementById("the table").style.display = "none"
 	} else {
-		document.getElementById("the table").style.display = "block"
+		document.getElementById("the table").style.display = "inline"
 	}
 }
   </script>
@@ -110,6 +110,7 @@ function open_table()
 <center>
 <hr>
 <button onclick='open_table()'>View average scores</button>
+<p><p>
 <table id="the table">
   <tr>
     <th>Average Score</th>
