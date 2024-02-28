@@ -16,7 +16,7 @@
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  display: block;
+  display: none;
   
 }
 
@@ -79,10 +79,10 @@ async function view() {
   }
 function open_table()
 {
-	if (document.getElementById("the table").style.display == "block"){
+	if (document.getElementById("the table").style.display == "inline"){
 		document.getElementById("the table").style.display = "none"
 	} else {
-		document.getElementById("the table").style.display = "block"
+		document.getElementById("the table").style.display = "inline"
 	}
 }
   </script>
@@ -106,6 +106,7 @@ function open_table()
 	<p style='text-align: center;' id='Total Score'>Total Score</p>
     </div>
 <button onclick='open_table()'>View average scores</button>
+<center>
 <table id="the table">
   <tr>
     <th>Average Score</th>
@@ -140,7 +141,7 @@ function open_table()
     <td>2.75</td>
     <td></td>
   </tr>
-
+</center>
 
 </table>
   <center>
