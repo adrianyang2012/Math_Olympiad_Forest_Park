@@ -77,7 +77,7 @@ async function view() {
 		}
 		
   }
-document.getElementById("the table").style.display = "none"
+
 function open_table()
 {
 	if (document.getElementById("the table").style.display == "block"){
@@ -108,6 +108,7 @@ function open_table()
     </div>
 
 <center>
+<hr>
 <button onclick='open_table()'>View average scores</button>
 <table id="the table">
   <tr>
@@ -149,6 +150,9 @@ function open_table()
   <center>
 	<a href="https://info.flagcounter.com/NapJ"><img src="https://s01.flagcounter.com/count2/NapJ/bg_FFFFFF/txt_000000/border_FFFFFF/columns_3/maxflags_12/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>  
   </center>
+<script>
+	document.getElementById("the table").style.display = "none";
+</script>
   </body>
 </html>
 
