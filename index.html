@@ -12,6 +12,19 @@
 	#Test_results {
     	display:none;
     }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
 </style>
 <link rel="icon"  href="https://fremontunified.org/forestpark/wp-content/uploads/sites/23/2023/06/forest-park.png" />
 <script>
@@ -29,7 +42,6 @@ function decrypt_message(message, shift) {
   
   	return result;
 }
-console.log(decrypt_message('hi', 1));
 async function view() {
 		const res = await fetch('encrypted_names_json.json')
 		data = await res.json();
@@ -63,6 +75,14 @@ async function view() {
 		}
 		
   }
+function open_table()
+{
+	if (document.getElementById("the table").style.display == "block"){
+		document.getElementById("the table").style.display = "none"
+	} else {
+		document.getElementById("the table").style.display = "block"
+	}
+}
   </script>
   <body>
 
@@ -83,6 +103,44 @@ async function view() {
         <p style='text-align: center;' id='Test 5'>Test 5 Result</p>
 	<p style='text-align: center;' id='Total Score'>Total Score</p>
     </div>
+<button onclick='open_table()'>View average scores</button>
+<table id="the table">
+  <tr>
+    <th>Average Score</th>
+    <th>Test 1</th>
+    <th>Test 2</th>
+    <th>Test 3</th>
+    <th>Test 4</th>
+    <th>Test 5</th>
+
+  </tr>
+  <tr>
+    <td>Overall</td>
+    <td>2.16</td>
+    <td>2</td>
+    <td>2.58</td>
+    <td>2.49</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>4th grade</td>
+    <td>2.02</td>
+    <td>1.83</td>
+    <td>2.6</td>
+    <td>2.26</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>5th grade</td>
+    <td>2.3</td>
+    <td>2.2</td>
+    <td>2.56</td>
+    <td>2.75</td>
+    <td></td>
+  </tr>
+
+
+</table>
   <center>
 	<a href="https://info.flagcounter.com/NapJ"><img src="https://s01.flagcounter.com/count2/NapJ/bg_FFFFFF/txt_000000/border_FFFFFF/columns_3/maxflags_12/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>  
   </center>
